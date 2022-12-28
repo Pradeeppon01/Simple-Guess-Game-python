@@ -1,10 +1,12 @@
 secret_number=5
-i=0
-while i<3:
+guess_count=0
+guess_limit=3
+print("Guess a number between 1-15")
+while guess_count<guess_limit:
     Guess=input('Guess:')
+    guess_count += 1
     if int(Guess) == secret_number:
       print("You won!")
-    else:
-      i+=1
-    
-print('You have failed!')
+      break
+else:
+  print('You have failed!')
